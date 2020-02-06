@@ -1,0 +1,116 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+html {
+  font-size: 16px;
+  }
+
+body {
+  background-color: #000;
+  color: white;
+  line-height: 1.65;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.15;
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 7.594em;
+}
+
+h2 {
+  font-size: 5.063em;
+}
+
+h3 {
+  font-size: 3.375em;
+}
+
+h4 {
+  font-size: 2.25em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: 1.15rem;
+}
+
+a {
+  color: #b98f67;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------ */
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 3em 1em;
+  border-bottom: 4px solid #090909;
+    box-sizing: border-box;
+  /* background-color: red; */
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.links-wrapper li:nth-child(odd) {
+  /* padding: 0 1em; */
+}
+
+.container {
+  width: 100%;
+  padding: 3em 1em;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-weight: 400;
+}
+
+.projects {
+  background-color: #353532;
+  margin-top: 200px;
+}
+
+.card {}
+
+.card-img {
+  height: 350px;
+  background-image: url('placeholder.png');
+  background-size: cover;
+  margin-top: -200px;
+  margin-bottom: 1em;
+}
+
+
+
+@media (max-width: 576px) {
+
+  /* .hero { font-size: 30%; } */
+
+
+ }
