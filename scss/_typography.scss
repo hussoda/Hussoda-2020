@@ -1,0 +1,64 @@
+$font-stack:    'Editorial New', sans-serif;
+$font-cta:    'Inter UI', sans;
+
+html {
+  font-family: $font-stack;
+  font-weight: 400;
+  color: white;
+  // font-size: 18px;
+  ::-moz-selection { background: #fff; color: #000; }
+  ::selection { background: #fff; color: #000; }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: -1px;
+  &:hover { color: #FFD200; }
+  transition: color 0.5s ease-in-out;
+  font-family: $font-cta;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: $font-stack;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+p {
+  font-family: $font-cta;
+  margin-bottom: 1.15rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: $font-stack;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 60.2833px;
+  line-height: 1.332;
+}
+
+h2 {font-size: 3.998em;}
+
+h3 {font-size: 2.827em;}
+
+h4 {font-size: 1.999em;}
+
+h5 {font-size: 1.414em;}
+
+h6 {
+  font-family: $font-cta;
+  text-transform: uppercase;
+}
+
+small, .text_small {font-size: 0.707em;}
+
+footer {
+  ::-moz-selection { background: #000; color: #fff; }
+  ::selection { background: #000; color: #fff; }
+}

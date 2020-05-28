@@ -1,0 +1,219 @@
+.base-container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+.base-container h1 {
+  margin: 0;
+}
+
+.nav-wrapper {
+  height: 10vh;
+  padding-top: 5vh;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nav-wrapper svg {
+  max-height: 50px;
+}
+
+.links-wrapper {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+.links-wrapper a {
+  margin-left: 1vw;
+}
+.links-wrapper a:nth-child(odd) {
+  padding: 12px;
+}
+
+.hero {
+  padding-top: 8vmax;
+  margin-bottom: 5vmax;
+}
+.hero h1 {
+  font-size: calc(3.36vw + 1rem);
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-wrapper {
+  width: 100%;
+  text-transform: none;
+}
+.card-wrapper:nth-child(even) {
+  margin-left: 18px;
+}
+.card-wrapper:nth-child(odd) {
+  margin-right: 18px;
+}
+
+.card {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.content {
+  width: 50%;
+  padding: 64px;
+  box-sizing: border-box;
+  text-transform: none;
+}
+
+.project-1 {
+  background-image: url(../img/projects/thumbnails/tgc-thumbnail.jpg);
+}
+
+.project-2 {
+  background-image: url(../img/projects/thumbnails/karos-thumbnail.png);
+}
+
+.thumbnail {
+  height: 600px;
+  background-color: #FFD200;
+  color: black;
+}
+.thumbnail button {
+  color: black;
+  border-color: black;
+}
+
+.more-work {
+  width: 50%;
+  background-image: url(https://assets.squarespace.com/universal/images-v6/configuration/placeholder/3x4-image-6-half-color.jpg);
+}
+
+footer {
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+footer g {
+  fill: black;
+}
+.footer-wrapper {
+  padding: 64px;
+  margin: 0;
+}
+
+.sub-page-hero h1 {
+  margin: 0;
+}
+
+html {
+  font-family: "Editorial New", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+html ::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+html ::selection {
+  background: #fff;
+  color: #000;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: -1px;
+  transition: color 0.5s ease-in-out;
+  font-family: "Inter UI", sans;
+  text-transform: uppercase;
+}
+a:hover {
+  color: #FFD200;
+}
+
+body {
+  font-family: "Editorial New", sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+p {
+  font-family: "Inter UI", sans;
+  margin-bottom: 1.15rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: "Editorial New", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 60.2833px;
+  line-height: 1.332;
+}
+
+h2 {
+  font-size: 3.998em;
+}
+
+h3 {
+  font-size: 2.827em;
+}
+
+h4 {
+  font-size: 1.999em;
+}
+
+h5 {
+  font-size: 1.414em;
+}
+
+h6 {
+  font-family: "Inter UI", sans;
+  text-transform: uppercase;
+}
+
+small, .text_small {
+  font-size: 0.707em;
+}
+
+footer ::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+footer ::selection {
+  background: #000;
+  color: #fff;
+}
+
+html {
+  background-color: #000000;
+  scroll-behavior: smooth;
+}
+
+button {
+  padding: 32px;
+  background-color: transparent;
+  color: #FFD200;
+  font-family: inherit;
+  padding: 0.6rem 2rem;
+  border: 1px solid #FFD200;
+  font-family: "inter UI";
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  border-color: white;
+  background-color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
