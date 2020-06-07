@@ -3,20 +3,36 @@ $secondary-color: #333;
 $cta-color: #333;
 $background-color: #000000;
 
+* {
+  box-sizing: border-box;
+}
+
+a {
+  transition: color 0.5s ease-in-out;
+  &:hover {
+    // color: #FFD200;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to right,#fff 100%,#fff 0);
+    background-size: 1px 1px;
+    background-position: 0 100%;
+    white-space: initial;
+    }
+  }
+
 html {
   background-color: $background-color;
   scroll-behavior: smooth;
 }
 
-button {
-  padding: 32px;
+img {
+  width: 100% !important;
+}
+
+.button {
   background-color: transparent;
-  color: #FFD200;
-  font-family: inherit;
+  color: #000;
   padding: 0.6rem 2rem;
-  border: 1px solid #FFD200;
-  // border-radius: 2px;
-  font-family: 'inter UI';
+  border: 1px solid #000;
   transition: all 0.2s ease-in-out;
   &:hover { border-color: white; background-color: white; }
 }

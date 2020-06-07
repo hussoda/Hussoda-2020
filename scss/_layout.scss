@@ -5,18 +5,28 @@
   margin-right: auto;
 }
 
+@mixin margin-center-100 {
+  margin: 100px auto;
+}
+
 
 .base-container {
   width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  @include margin-auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  // grid-template-rows: auto;
+  @include margin-center-100;
   box-sizing: border-box;
   h1 { margin: 0; }
+  // grid-auto-flow: row;
   // background-color: red;
 }
+
+@media (min-width: 768px) {
+  .base-container {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    }
+  }
 
 
 // Nav Bar
@@ -32,37 +42,36 @@
   justify-self: end;
   display: flex;
   align-items: center;
-  a {margin-left: 1vw;
-    &:nth-child(odd) { padding: 12px; }
-  }
+  a { padding: 12px; }
 }
+
+.burger-icon {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .burger-icon { display: block; }
+  .links-wrapper { display: none; }
+  }
+
 
 
 // Hero Section
 .hero {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   padding-top: 8vmax;
   h1 { font-size: calc(3.36vw + 1rem) }
   margin-bottom: 5vmax;
 }
 
-// Projects
-
-// .projects-wrapper {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-//   width: 95%;
-//   margin: 0 auto;
-// }
+// Works
 
 .projects-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 }
 
 .card-wrapper {
   width: 100%;
-  &:nth-child(even) { margin-left: 18px; }
-  &:nth-child(odd) { margin-right: 18px; }
   text-transform: none;
 }
 
@@ -73,6 +82,12 @@
   background-position: center;
   cursor: pointer;
 }
+
+@media (max-width: 375px) {
+    .card {
+      height: 400px;
+    }
+  }
 
 .content {
   width: 50%;
@@ -90,6 +105,7 @@
   background-color: #FFD200;
   color: black;
   button { color: black; border-color: black; }
+  & .content { width: 100%; }
 
 }
 
@@ -107,10 +123,40 @@ footer {
 }
 
 .footer-wrapper {
-  padding: 64px;
+  display: flex;
   margin: 0;
+  padding: 64px;
+  box-sizing: border-box;
 }
 
 .sub-page-hero {
   h1 { margin: 0; }
 }
+
+// Project Page
+
+.project-hero {
+  img { grid-column-start: 1; grid-column-end: 3; }
+}
+
+.project-copy {
+  width: 50%;
+  @include margin-center-100;
+}
+
+.layout-1 {
+  gap: 1em;
+}
+
+.two-columns {
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  img { width: 100%; }
+}
+
+@media (max-width: 375px) {
+  .project-copy {
+    width: 100%;
+    padding: 18px;
+
+    }
+  }

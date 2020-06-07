@@ -1,120 +1,25 @@
-.base-container {
-  width: 95%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  box-sizing: border-box;
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/InterWeb/Inter-Regular.woff2") format("woff2"), url("../fonts/InterWeb/Inter-Regular.woff") format("woff");
+  font-weight: 400;
 }
-.base-container h1 {
-  margin: 0;
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/InterWeb/Inter-Bold.woff2") format("woff2"), url("../fonts/InterWeb/Inter-Bold.woff") format("woff");
+  font-weight: 500;
 }
-
-.nav-wrapper {
-  height: 10vh;
-  padding-top: 5vh;
-  margin-top: 0;
-  margin-bottom: 0;
+@font-face {
+  font-family: "Editorial New";
+  src: url("../fonts/Editorial New/EditorialNew-Regular.otf") format("opentype");
+  font-weight: 400;
 }
-.nav-wrapper svg {
-  max-height: 50px;
+@font-face {
+  font-family: "Editorial New";
+  src: url("../fonts/Editorial New/EditorialNew-Ultrabold.otf") format("opentype");
+  font-weight: 600;
 }
-
-.links-wrapper {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-}
-.links-wrapper a {
-  margin-left: 1vw;
-}
-.links-wrapper a:nth-child(odd) {
-  padding: 12px;
-}
-
-.hero {
-  padding-top: 8vmax;
-  margin-bottom: 5vmax;
-}
-.hero h1 {
-  font-size: calc(3.36vw + 1rem);
-}
-
-.projects-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.card-wrapper {
-  width: 100%;
-  text-transform: none;
-}
-.card-wrapper:nth-child(even) {
-  margin-left: 18px;
-}
-.card-wrapper:nth-child(odd) {
-  margin-right: 18px;
-}
-
-.card {
-  width: 100%;
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-}
-
-.content {
-  width: 50%;
-  padding: 64px;
-  box-sizing: border-box;
-  text-transform: none;
-}
-
-.project-1 {
-  background-image: url(../img/projects/thumbnails/tgc-thumbnail.jpg);
-}
-
-.project-2 {
-  background-image: url(../img/projects/thumbnails/karos-thumbnail.png);
-}
-
-.thumbnail {
-  height: 600px;
-  background-color: #FFD200;
-  color: black;
-}
-.thumbnail button {
-  color: black;
-  border-color: black;
-}
-
-.more-work {
-  width: 50%;
-  background-image: url(https://assets.squarespace.com/universal/images-v6/configuration/placeholder/3x4-image-6-half-color.jpg);
-}
-
-footer {
-  width: 100%;
-  background-color: white;
-  color: black;
-}
-footer g {
-  fill: black;
-}
-.footer-wrapper {
-  padding: 64px;
-  margin: 0;
-}
-
-.sub-page-hero h1 {
-  margin: 0;
-}
-
 html {
-  font-family: "Editorial New", sans-serif;
+  font-family: "Editorial New", serif;
   font-weight: 400;
   color: white;
 }
@@ -127,32 +32,33 @@ html ::selection {
   color: #000;
 }
 
+article {
+  font-family: "Inter UI", sans-serif;
+  font-size: 1.5em;
+}
+
 a {
   color: white;
   text-decoration: none;
   letter-spacing: -1px;
-  transition: color 0.5s ease-in-out;
-  font-family: "Inter UI", sans;
+  font-family: "Inter UI", sans-serif;
   text-transform: uppercase;
-}
-a:hover {
-  color: #FFD200;
 }
 
 body {
-  font-family: "Editorial New", sans-serif;
+  font-family: "Editorial New", serif;
   font-weight: 400;
   line-height: 1.65;
 }
 
 p {
-  font-family: "Inter UI", sans;
+  font-family: "Inter UI", sans-serif;
   margin-bottom: 1.15rem;
 }
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
-  font-family: "Editorial New", sans-serif;
+  font-family: "Editorial New", serif;
   font-weight: 400;
   line-height: 1.15;
 }
@@ -179,7 +85,7 @@ h5 {
 }
 
 h6 {
-  font-family: "Inter UI", sans;
+  font-family: "Inter UI", sans-serif;
   text-transform: uppercase;
 }
 
@@ -188,7 +94,7 @@ small, .text_small {
 }
 
 footer ::-moz-selection {
-  background: #000;
+  background: red;
   color: #fff;
 }
 footer ::selection {
@@ -196,22 +102,196 @@ footer ::selection {
   color: #fff;
 }
 
+.base-container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 100px auto;
+  box-sizing: border-box;
+}
+.base-container h1 {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .base-container {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+  }
+}
+.nav-wrapper {
+  height: 10vh;
+  padding-top: 5vh;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nav-wrapper svg {
+  max-height: 50px;
+}
+
+.links-wrapper {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+.links-wrapper a {
+  padding: 12px;
+}
+
+.burger-icon {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .burger-icon {
+    display: block;
+  }
+
+  .links-wrapper {
+    display: none;
+  }
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding-top: 8vmax;
+  margin-bottom: 5vmax;
+}
+.hero h1 {
+  font-size: calc(3.36vw + 1rem);
+}
+
+.projects-wrapper {
+  gap: 1em;
+}
+
+.card-wrapper {
+  width: 100%;
+  text-transform: none;
+}
+
+.card {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .card {
+    height: 400px;
+  }
+}
+.content {
+  width: 50%;
+  padding: 64px;
+  box-sizing: border-box;
+  text-transform: none;
+}
+
+.project-1 {
+  background-image: url(../img/projects/thumbnails/tgc-thumbnail.jpg);
+}
+
+.project-2 {
+  background-image: url(../img/projects/thumbnails/karos-thumbnail.png);
+}
+
+.thumbnail {
+  height: 600px;
+  background-color: #FFD200;
+  color: black;
+}
+.thumbnail button {
+  color: black;
+  border-color: black;
+}
+.thumbnail .content {
+  width: 100%;
+}
+
+.more-work {
+  width: 50%;
+  background-image: url(https://assets.squarespace.com/universal/images-v6/configuration/placeholder/3x4-image-6-half-color.jpg);
+}
+
+footer {
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+footer g {
+  fill: black;
+}
+.footer-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 64px;
+  box-sizing: border-box;
+}
+
+.sub-page-hero h1 {
+  margin: 0;
+}
+
+.project-hero img {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project-copy {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.layout-1 {
+  gap: 1em;
+}
+
+.two-columns {
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+.two-columns img {
+  width: 100%;
+}
+
+@media (max-width: 375px) {
+  .project-copy {
+    width: 100%;
+    padding: 18px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+a {
+  transition: color 0.5s ease-in-out;
+}
+a:hover {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(to right, #fff 100%, #fff 0);
+  background-size: 1px 1px;
+  background-position: 0 100%;
+  white-space: initial;
+}
+
 html {
   background-color: #000000;
   scroll-behavior: smooth;
 }
 
-button {
-  padding: 32px;
+img {
+  width: 100% !important;
+}
+
+.button {
   background-color: transparent;
-  color: #FFD200;
-  font-family: inherit;
+  color: #000;
   padding: 0.6rem 2rem;
-  border: 1px solid #FFD200;
-  font-family: "inter UI";
+  border: 1px solid #000;
   transition: all 0.2s ease-in-out;
 }
-button:hover {
+.button:hover {
   border-color: white;
   background-color: white;
 }
