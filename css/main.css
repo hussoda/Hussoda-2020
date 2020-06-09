@@ -119,13 +119,20 @@ footer ::selection {
   }
 }
 .nav-wrapper {
-  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 95%;
+  min-height: 10vh;
   padding-top: 5vh;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .nav-wrapper svg {
   max-height: 50px;
+}
+
+.logo-wrapper:hover {
+  background-size: 0px;
 }
 
 .links-wrapper {
@@ -139,11 +146,13 @@ footer ::selection {
 
 .burger-icon {
   display: none;
+  justify-items: end;
+  align-content: center;
 }
 
 @media (max-width: 375px) {
   .burger-icon {
-    display: block;
+    display: grid;
   }
 
   .links-wrapper {
@@ -273,6 +282,7 @@ a:hover {
   background-size: 1px 1px;
   background-position: 0 100%;
   white-space: initial;
+  cursor: pointer !important;
 }
 
 html {

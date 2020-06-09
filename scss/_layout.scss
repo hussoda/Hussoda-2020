@@ -31,12 +31,17 @@
 
 // Nav Bar
 .nav-wrapper {
-  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 95%;
+  min-height: 10vh;
   padding-top: 5vh;
-  margin-top: 0;
-  margin-bottom: 0;
+  @include margin-auto;
   svg { max-height: 50px}
 }
+
+.logo-wrapper:hover { background-size: 0px; }
+
 
 .links-wrapper {
   justify-self: end;
@@ -47,10 +52,13 @@
 
 .burger-icon {
   display: none;
+  justify-items: end;
+  align-content: center;
 }
 
 @media (max-width: 375px) {
-  .burger-icon { display: block; }
+  // .nav-wrapper { padding: 5vh 1em 0; }
+  .burger-icon { display: grid; }
   .links-wrapper { display: none; }
   }
 
