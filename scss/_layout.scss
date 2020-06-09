@@ -99,7 +99,7 @@
 
 .content {
   width: 50%;
-  padding: 64px;
+  padding: 1em;
   box-sizing: border-box;
   text-transform: none;
 }
@@ -109,7 +109,7 @@
 .project-2 { background-image: url(../img/projects/thumbnails/karos-thumbnail.png); }
 
 .thumbnail {
-  height: 600px;
+  min-height: 600px;
   background-color: #FFD200;
   color: black;
   button { color: black; border-color: black; }
@@ -133,7 +133,7 @@ footer {
 .footer-wrapper {
   display: flex;
   margin: 0;
-  padding: 64px;
+  padding: 1em;
   box-sizing: border-box;
 }
 
