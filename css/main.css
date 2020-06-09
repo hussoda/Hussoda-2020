@@ -192,7 +192,7 @@ footer ::selection {
 }
 .content {
   width: 50%;
-  padding: 64px;
+  padding: 1em;
   box-sizing: border-box;
   text-transform: none;
 }
@@ -206,7 +206,7 @@ footer ::selection {
 }
 
 .thumbnail {
-  height: 600px;
+  min-height: 600px;
   background-color: #FFD200;
   color: black;
 }
@@ -234,7 +234,7 @@ footer g {
 .footer-wrapper {
   display: flex;
   margin: 0;
-  padding: 64px;
+  padding: 1em;
   box-sizing: border-box;
 }
 
