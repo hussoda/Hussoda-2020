@@ -6,7 +6,7 @@
 }
 
 @mixin margin-center-100 {
-  margin: 100px auto;
+  margin: 5rem auto;
 }
 
 
@@ -14,12 +14,9 @@
   width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  // grid-template-rows: auto;
   @include margin-center-100;
   box-sizing: border-box;
   h1 { margin: 0; }
-  // grid-auto-flow: row;
-  // background-color: red;
 }
 
 @media (min-width: 768px) {
@@ -27,7 +24,6 @@
     grid-template-columns: repeat(2, minmax(320px, 1fr));
     }
   }
-
 
 // Nav Bar
 .nav-wrapper {
@@ -41,7 +37,6 @@
 }
 
 .logo-wrapper:hover { background-size: 0px; }
-
 
 .links-wrapper {
   justify-self: end;
@@ -62,12 +57,10 @@
   .links-wrapper { display: none; }
   }
 
-
-
 // Hero Section
 .hero {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding-top: 8vmax;
+  padding-top: 15vmax;
   h1 { font-size: calc(3.36vw + 1rem) }
   margin-bottom: 5vmax;
 }
@@ -81,6 +74,7 @@
 .card-wrapper {
   width: 100%;
   text-transform: none;
+  &:hover { background-size: 0; }
 }
 
 .card {
@@ -109,12 +103,12 @@
 .project-2 { background-image: url(../img/projects/thumbnails/karos-thumbnail.png); }
 
 .thumbnail {
-  min-height: 600px;
+  display: grid;
+  align-items: center;
   background-color: #FFD200;
+  padding: 2rem;
   color: black;
   button { color: black; border-color: black; }
-  & .content { width: 100%; }
-
 }
 
 .more-work {
@@ -124,16 +118,17 @@
 
 footer {
   width: 100%;
-  background-color: white;
-  color: black;
-  g { fill: black; }
+  padding: 2rem;
+  // background-color: #000;
+  color: #fff;
+  // g { fill: black; }
   svg {  }
 }
 
 .footer-wrapper {
   display: flex;
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -153,7 +148,7 @@ footer {
 }
 
 .layout-1 {
-  gap: 1em;
+  gap: 1rem;
 }
 
 .two-columns {

@@ -22,6 +22,7 @@ html {
   font-family: "Editorial New", serif;
   font-weight: 400;
   color: white;
+  font-size: 100%;
 }
 html ::-moz-selection {
   background: #fff;
@@ -64,8 +65,8 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 60.2833px;
-  line-height: 1.332;
+  margin-top: 0;
+  font-size: 4.209em;
 }
 
 h2 {
@@ -90,7 +91,7 @@ h6 {
 }
 
 small, .text_small {
-  font-size: 0.707em;
+  font-size: 0.75em;
 }
 
 footer ::-moz-selection {
@@ -106,7 +107,7 @@ footer ::selection {
   width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  margin: 100px auto;
+  margin: 5rem auto;
   box-sizing: border-box;
 }
 .base-container h1 {
@@ -161,7 +162,7 @@ footer ::selection {
 }
 .hero {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding-top: 8vmax;
+  padding-top: 15vmax;
   margin-bottom: 5vmax;
 }
 .hero h1 {
@@ -175,6 +176,9 @@ footer ::selection {
 .card-wrapper {
   width: 100%;
   text-transform: none;
+}
+.card-wrapper:hover {
+  background-size: 0;
 }
 
 .card {
@@ -206,16 +210,15 @@ footer ::selection {
 }
 
 .thumbnail {
-  min-height: 600px;
+  display: grid;
+  align-items: center;
   background-color: #FFD200;
+  padding: 2rem;
   color: black;
 }
 .thumbnail button {
   color: black;
   border-color: black;
-}
-.thumbnail .content {
-  width: 100%;
 }
 
 .more-work {
@@ -225,16 +228,13 @@ footer ::selection {
 
 footer {
   width: 100%;
-  background-color: white;
-  color: black;
-}
-footer g {
-  fill: black;
+  padding: 2rem;
+  color: #fff;
 }
 .footer-wrapper {
   display: flex;
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -249,11 +249,11 @@ footer g {
 
 .project-copy {
   width: 50%;
-  margin: 100px auto;
+  margin: 5rem auto;
 }
 
 .layout-1 {
-  gap: 1em;
+  gap: 1rem;
 }
 
 .two-columns {
