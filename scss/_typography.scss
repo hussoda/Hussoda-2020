@@ -31,7 +31,7 @@ html {
   font-family: $display-font;
   font-weight: 400;
   color: white;
-  // font-size: 18px;
+  font-size: 100%;
   ::-moz-selection { background: #fff; color: #000; }
   ::selection { background: #fff; color: #000; }
 }
@@ -68,8 +68,8 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 60.2833px;
-  line-height: 1.332;
+  margin-top: 0;
+  font-size: 4.209em;
 }
 
 h2 {font-size: 3.998em;}
@@ -85,7 +85,7 @@ h6 {
   text-transform: uppercase;
 }
 
-small, .text_small {font-size: 0.707em;}
+small, .text_small {font-size: 0.75em;}
 
 footer {
   ::-moz-selection { background: red; color: #fff; }
