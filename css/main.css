@@ -140,6 +140,7 @@ footer ::selection {
   justify-self: end;
   display: flex;
   align-items: center;
+  text-decoration: line-through;
 }
 .links-wrapper a {
   padding: 12px;
@@ -207,6 +208,10 @@ footer ::selection {
 
 .project-2 {
   background-image: url(../img/projects/thumbnails/karos-thumbnail.png);
+}
+
+.project-3 {
+  background-image: url(../img/projects/thumbnails/lea-spa-thumbnail.jpg);
 }
 
 .thumbnail {
