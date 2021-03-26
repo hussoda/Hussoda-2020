@@ -42,6 +42,7 @@
   justify-self: end;
   display: flex;
   align-items: center;
+  text-decoration: line-through;
   a { padding: 12px; }
 }
 
@@ -101,6 +102,8 @@
 .project-1 { background-image: url(../img/projects/thumbnails/tgc-thumbnail.jpg); }
 
 .project-2 { background-image: url(../img/projects/thumbnails/karos-thumbnail.png); }
+
+.project-3 { background-image: url(../img/projects/thumbnails/lea-spa-thumbnail.jpg); }
 
 .thumbnail {
   display: grid;
