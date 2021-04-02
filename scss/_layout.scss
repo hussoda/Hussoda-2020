@@ -25,38 +25,6 @@
     }
   }
 
-// Nav Bar
-.nav-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 95%;
-  min-height: 10vh;
-  padding-top: 5vh;
-  @include margin-auto;
-  svg { max-height: 50px}
-}
-
-.logo-wrapper:hover { background-size: 0px; }
-
-.links-wrapper {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-  text-decoration: line-through;
-  a { padding: 12px; }
-}
-
-.burger-icon {
-  display: none;
-  justify-items: end;
-  align-content: center;
-}
-
-@media (max-width: 375px) {
-  // .nav-wrapper { padding: 5vh 1em 0; }
-  .burger-icon { display: grid; }
-  .links-wrapper { display: none; }
-  }
 
 // Hero Section
 .hero {
@@ -108,7 +76,7 @@
 .thumbnail {
   display: grid;
   align-items: center;
-  background-color: #FFD200;
+  background-color: #F57A01;
   padding: 2rem;
   color: black;
   button { color: black; border-color: black; }
