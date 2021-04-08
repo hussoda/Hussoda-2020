@@ -43,7 +43,9 @@
 .card-wrapper {
   width: 100%;
   text-transform: none;
-  &:hover { background-size: 0; }
+  overflow: hidden;
+  text-decoration: none;
+  &:hover { text-decoration: none;}
 }
 
 .card {
@@ -67,7 +69,12 @@
   text-transform: none;
 }
 
-.project-1 { background-image: url(../img/projects/thumbnails/tgc-thumbnail.jpg); }
+.project-1 {
+  background: url(../img/projects/thumbnails/tgc-thumbnail.jpg);
+  transition: transform .8s ease;
+  overflow: hidden;
+  &:hover { transform: scale(1.1);}
+}
 
 .project-2 { background-image: url(../img/projects/thumbnails/karos-thumbnail.png); }
 
@@ -131,6 +138,20 @@ footer {
   .project-copy {
     width: 100%;
     padding: 18px;
-
+    }
+    .hero {
+      padding-top: 1vmax;
+      h1 { font-size: calc(7vw + 1rem) }
     }
   }
+
+
+.portfolio_body .cs_list {
+  display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.portfolio_body .cs_list li {
+    width: 32.25%;
+    margin-right: 1.625%;}
