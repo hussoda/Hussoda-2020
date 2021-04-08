@@ -22,7 +22,7 @@
 }
 
 #menuToggle a:hover {
-  color: #F57A01;
+  color: #f57a01;
 }
 
 #menuToggle input {
@@ -81,10 +81,10 @@
   margin: 0;
   padding: 100px;
   padding-top: 125px;
-  background: #671F37;
+  background: #671f37;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 #menu li {
@@ -102,7 +102,7 @@
   }
 
   .nav-wrapper {
-    margin-top: 0;
+    margin-top: 3em;
   }
 }
 

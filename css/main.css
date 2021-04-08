@@ -22,7 +22,7 @@
 }
 
 #menuToggle a:hover {
-  color: #F57A01;
+  color: #f57a01;
 }
 
 #menuToggle input {
@@ -81,10 +81,10 @@
   margin: 0;
   padding: 100px;
   padding-top: 125px;
-  background: #671F37;
+  background: #671f37;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 #menu li {
@@ -102,7 +102,7 @@
   }
 
   .nav-wrapper {
-    margin-top: 0;
+    margin-top: 3em;
   }
 }
 @font-face {
@@ -164,7 +164,7 @@ p {
   margin-bottom: 1.15rem;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   margin: 2.75rem 0 1.05rem;
   font-family: "Editorial New", serif;
   font-weight: 400;
@@ -195,6 +195,7 @@ h5 {
 h6 {
   font-family: "Inter UI", sans-serif;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 small, .text_small {
@@ -242,9 +243,11 @@ footer ::selection {
 .card-wrapper {
   width: 100%;
   text-transform: none;
+  overflow: hidden;
+  text-decoration: none;
 }
 .card-wrapper:hover {
-  background-size: 0;
+  text-decoration: none;
 }
 
 .card {
@@ -268,7 +271,12 @@ footer ::selection {
 }
 
 .project-1 {
-  background-image: url(../img/projects/thumbnails/tgc-thumbnail.jpg);
+  background: url(../img/projects/thumbnails/tgc-thumbnail.jpg);
+  transition: transform 0.8s ease;
+  overflow: hidden;
+}
+.project-1:hover {
+  transform: scale(1.1);
 }
 
 .project-2 {
@@ -338,21 +346,27 @@ footer {
     width: 100%;
     padding: 18px;
   }
+
+  .hero {
+    padding-top: 1vmax;
+  }
+  .hero h1 {
+    font-size: calc(7vw + 1rem);
+  }
 }
-* {
-  box-sizing: border-box;
+.portfolio_body .cs_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-a {
-  transition: color 0.5s ease-in-out;
+.portfolio_body .cs_list li {
+  width: 32.25%;
+  margin-right: 1.625%;
 }
-a:hover {
-  background-repeat: repeat-x;
-  background-image: linear-gradient(to right, #fff 100%, #fff 0);
-  background-size: 1px 1px;
-  background-position: 0 100%;
-  white-space: initial;
-  cursor: pointer !important;
+
+* {
+  box-sizing: border-box;
 }
 
 html {

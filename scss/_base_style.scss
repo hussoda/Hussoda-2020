@@ -7,18 +7,17 @@ $background-color: #000705;
   box-sizing: border-box;
 }
 
-a {
-  transition: color 0.5s ease-in-out;
-  &:hover {
-    // color: #FFD200;
-    background-repeat: repeat-x;
-    background-image: linear-gradient(to right,#fff 100%,#fff 0);
-    background-size: 1px 1px;
-    background-position: 0 100%;
-    white-space: initial;
-    cursor: pointer !important;
-    }
-  }
+// a {
+//   transition: color 0.5s ease-in-out;
+//   &:hover {
+//     background-repeat: repeat-x;
+//     background-image: linear-gradient(to right,#fff 100%,#fff 0);
+//     background-size: 1px 1px;
+//     background-position: 0 100%;
+//     white-space: initial;
+//     cursor: pointer !important;
+//     }
+//   }
 
 html {
   background-color: $background-color;
